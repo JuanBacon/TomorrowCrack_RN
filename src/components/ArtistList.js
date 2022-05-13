@@ -1,23 +1,25 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { FlatList } from 'react-native-gesture-handler';
-import { artist } from '../utils/constants';
+import ArtistCard from './ArtistCard';
 
 export default function ArtistList(props) {
 
-  const {artists: {singers}} = props;
-  console.log(singers);
+  const { artists } = props;
 
   return (
-    <FlatList data={singers} keyExtractor= {(item) => item.id} />
-     
-    
+    <FlatList data={artists} keyExtractor={(artist) => String(artist.id)} numColumns={1} style={styles.flatListContainer}  renderItem={({ item }) => <ArtistCard name={item.name} desc={item.desc} uri = {item.uri}/>} />
+
+
   )
 }
 
 
 const styles = StyleSheet.create({
 
+  flatListContainer: {
+    paddingHorizontal: 5
+  }
 
-    
+
 })

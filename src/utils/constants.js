@@ -1,4 +1,4 @@
 
 
 
-export const artist = { singers: [{ id: 1, name: 'Badbunny', desc: 'El mejor cantante de españa' }, { id: 2, name: 'BlackPink', desc: 'Rampapapapam' }, { id: 3, name: 'Chayanee', desc: 'El mejor de' }] };
+export const artistAPI = { "results": [{ "id": 1, "name": 'Badbunny', "desc": 'El mejor cantante de españaaaaaaaaaaaa', "uri": 'https://yt3.ggpht.com/7tCfeCWH4arhsTM-4Rz4IxWieQbegzibeXlG-kbytAujdk5dr2K0gBb8NG0Cvk6lB1dPkjyd=s900-c-k-c0x00ffffff-no-rj'}, { "id": 2, "name": 'BlackPink', "desc": 'Rampapapapam' ,"uri": "https://depor.com/resizer/RE-UxBKaioGIPOiCpIWqtFo4qrg=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/BOBAQYR2A5E5NOZFGHDUBFUZAI.jpg" }, { "id": 3, "name": 'Chayanee', "desc": 'El mejor de' , 'uri': "https://www.mdzol.com/u/fotografias/m/2021/6/13/f1280x720-1068869_1200544_5529.jpg" }] };
