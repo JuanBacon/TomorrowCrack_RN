@@ -8,7 +8,7 @@ export default function ArtistList(props) {
   const { artists } = props;
 
   return (
-    <FlatList data={artists} keyExtractor={(artist) => String(artist.id)} numColumns={1} style={styles.flatListContainer}  renderItem={({ item }) => <ArtistCard name={item.name} desc={item.desc} uri = {item.uri}/>} />
+    <FlatList data={artists} keyExtractor={(artist) => String(artist.id)} numColumns={1} style={styles.flatListContainer}  renderItem={({ item }) => <ArtistCard item= {item}/>} />
 
 
   )

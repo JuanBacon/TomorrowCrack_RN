@@ -2,15 +2,16 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 
 export default function ArtistCard(props) {
-  const { name, desc, uri } = props
+
+  const { item} = props
   return (
     <View style={styles.card} >
       <View style={styles.spacing}>
         <View style={styles.bgColor}>
-          <View><Text style={styles.name} >ArtistCard: {name} </Text></View>
+          <View><Text style={styles.name} >ArtistCard: {item.name} </Text></View>
           <View style={styles.content}>
-            <Image source={{ uri: uri }} style={styles.image} />
-            <Text> Descripcion: {desc}</Text>
+            <Image source={{ uri: item.uri }} style={styles.image} />
+            <Text> Descripcion: {item.desc}</Text>
           </View>
         </View>
 
