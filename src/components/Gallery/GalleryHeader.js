@@ -1,24 +1,31 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, Image, StyleSheet } from "react-native";
+import React from "react";
 
 export default function GalleryHeader(props) {
-  
-    const {image} = props;
-    
-    return (
-    <View>
-        <Image style= { styles.image} />
-      <Text>GalleryHeader</Text>
+  const { images } = props;
+
+  return (
+    <View style={styles.container}>
+      <Image style={styles.image} source={{ uri: images[0].url }} />
+
+      <Text style={styles.text}> Texto de ejemplo</Text>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-
-    image: {
-        
-        height: 150,
-        width: 200 
-    }
-
-})
+  container: {
+    marginBottom: 30,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image: {
+    height: 150,
+    width: "100%",
+  },
+  text: {
+    position: "absolute",
+    color: "white",
+  },
+});
