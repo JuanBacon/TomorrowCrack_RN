@@ -2,13 +2,13 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
 
 export default function GalleryHeader(props) {
-  const { images } = props;
+  const { image } = props;
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: images.url }} />
+      <Image style={styles.image} source={{ uri: image.url }} />
 
-      <Text style={styles.text}> Texto de ejemplo</Text>
+      <Text style={styles.text}>{image.name}</Text>
     </View>
   );
 }

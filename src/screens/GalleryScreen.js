@@ -10,7 +10,7 @@ export default function GalleryScreen() {
   return (
 
     <View style={styles.container}>
-      <GalleryHeader images={imageHeader} />
+      <GalleryHeader image={imageHeader} />
       <GalleryList images={galleryAPI.results} changeHeader ={ (item)=>{ setImageHeader(item);}} />
     </View>
   );
