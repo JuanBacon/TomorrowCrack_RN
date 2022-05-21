@@ -6,7 +6,7 @@ export default function GalleryHeader(props) {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: images[0].url }} />
+      <Image style={styles.image} source={{ uri: images.url }} />
 
       <Text style={styles.text}> Texto de ejemplo</Text>
     </View>

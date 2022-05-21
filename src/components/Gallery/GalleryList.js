@@ -6,10 +6,11 @@ import GalleryCard from './GalleryCard';
 export default function GalleryList(props) {
 
 
-    const {images} = props;
+    const {images, changeHeader} = props;
 
   return (
 
-    <FlatList data={images} keyExtractor={(images)=> String(images.id)} numColumns={3}  renderItem={({item}) => <GalleryCard item ={item}/>}  /> 
+    <FlatList data={images} keyExtractor={(images)=> String(images.id)} numColumns={3}  renderItem={({item}) => <GalleryCard item ={item}  changeHeader= {changeHeader} />}  /> 
   )
 }
+
