@@ -1,10 +1,27 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet } from "react-native";
+import React , {useEffect, useState} from "react";
+import GalleryList from "../components/Gallery/GalleryList";
+import { galleryAPI } from "../utils/constants";
+import GalleryHeader from "../components/Gallery/GalleryHeader";
 
 export default function GalleryScreen() {
+  const [imageHeader, setImageHeader] = useState(galleryAPI.results[0])
+  
   return (
-    <View>
-      <Text>GalleryScreen</Text>
+
+    <View style={styles.container}>
+      <GalleryHeader image={imageHeader} />
+      <GalleryList images={galleryAPI.results} changeHeader ={ (item)=>{ setImageHeader(item);}} />
     </View>
-  )
+  );
 }
+
+
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexWrap: "nowrap",
+  },
+});
