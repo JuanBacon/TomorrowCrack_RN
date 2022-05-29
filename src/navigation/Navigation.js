@@ -10,8 +10,8 @@ const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="artista" component={ArtistNavigation} />
+    <Tab.Navigator screenOptions={{headerShown: false}}>
+      <Tab.Screen name="artista" component={ArtistNavigation}  />
       <Tab.Screen name="galeria" component={GalleryNavigation} />
       <Tab.Screen name="Principal" component={HomeScreen} />
       <Tab.Screen name="Carrito" component={CartNavigation} />

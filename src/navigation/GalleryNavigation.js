@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 export default function GalleryNavigation() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Galeria" component={GalleryScreen} />
     </Stack.Navigator>
   );

@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 export default function ArtistNavigation() {
   return (
 
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}} >
         <Stack.Screen name= 'AArtista' component={ArtistScreen} />
     </Stack.Navigator>
   )
