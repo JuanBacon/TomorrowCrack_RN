@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 export default function CartNavigation() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator  screenOptions={{headerShown: false}}>
         <Stack.Screen name='Carrito' component={CartScreen} />
     </Stack.Navigator>
     )

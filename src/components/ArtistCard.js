@@ -11,12 +11,12 @@ export default function ArtistCard(props) {
             <Text style={styles.name}> {item.name} </Text>
             <Pressable style={styles.button}>
               <Image source={{ uri: item.uri }} style={styles.imageBtn} />
-              <Text style={styles.textButton}>Spotyfiiiiiiii</Text>
+              <Text style={styles.textButton}>Lista Spotify</Text>
             </Pressable>
           </View>
           <View style={styles.content}>
             <Image source={{ uri: item.uri }} style={styles.image} />
-            <Text style={styles.textDesc}> Descripcion: {item.desc}</Text>
+            <Text style={styles.textDesc}> {item.desc}</Text>
           </View>
         </View>
       </View>
@@ -28,15 +28,20 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     height: 200,
+    
   },
   spacing: {
     flex: 1,
-    padding: 10,
+    padding: 8,
   },
   bgColor: {
     borderRadius: 10,
     backgroundColor: "#9BFF00",
     padding: 10,
+    borderRadius: 25,
+    backgroundColor: "rgba(48,43,79,0.8)",
+    backdropFilter: "blur(6px)",
+    mixBlendMode: "normal",
   },
   name: {
     flexGrow: 1,
@@ -44,6 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    color: "white"
   },
   button: {
     flexDirection: "row",
@@ -71,11 +77,16 @@ const styles = StyleSheet.create({
   image: {
     height: 100,
     width: 100,
+    borderRadius: 100
+
   },
   content: {
     flexDirection: "row",
+    alignItems: "center"
   },
   textDesc: {
     flexShrink: 1,
+    color: "white",
+    left: 10
   },
 });
