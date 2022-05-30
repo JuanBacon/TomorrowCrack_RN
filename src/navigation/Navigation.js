@@ -22,10 +22,11 @@ export default function Navigation() {
         paddingRight: 29,
         backdropFilter: "blur(6px)",
       },
-      showLabel: true
+      showLabel: true,
+      headerShown: false
     }}>
-      <Tab.Screen name="Artista" component={ArtistNavigation} />
-      <Tab.Screen name="galeria" component={GalleryNavigation} />
+      <Tab.Screen name="Artista" component={ArtistNavigation}  />
+      <Tab.Screen name="Galeria" component={GalleryNavigation} />
       <Tab.Screen name="Principal" component={HomeScreen} />
       <Tab.Screen name="Carrito" component={CartNavigation} />
     </Tab.Navigator>
