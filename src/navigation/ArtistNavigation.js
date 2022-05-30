@@ -10,7 +10,7 @@ export default function ArtistNavigation() {
   return (
 
     <Stack.Navigator screenOptions={{headerShown: false}} >
-        <Stack.Screen name= 'AArtista' component={ArtistScreen} />
+        <Stack.Screen name= 'Artista' component={ArtistScreen} />
     </Stack.Navigator>
   )
 }

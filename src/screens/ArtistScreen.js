@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, StatusBar } from 'react-native'
 import React from 'react'
 import ArtistList from '../components/ArtistList'
 import {artistAPI} from '../utils/constants'
@@ -15,7 +15,8 @@ export default function ArtistScreen() {
     // </View>
 
     <SafeAreaView style={styles.appBackground}>
-      
+      <StatusBar barStyle="light-content" backgroundColor={"#302B4F"} />
+      <Text style={styles.title}>Artistas</Text>
       <Image source={require('../../assets/GifMuestra2.gif')} style={styles.video} resizeMode="cover"></Image>
       <ArtistList artists= {artistAPI.results}/>
 
@@ -25,16 +26,19 @@ export default function ArtistScreen() {
 
 const styles = StyleSheet.create({
   appBackground: {
-  
-    backgroundColor: "#1E193B",
-    
-    
+    backgroundColor: "#06021B",
   },
   video: {
     position: "absolute",
     width: "100%",
     height: "100%",
-    opacity: 0.2
-
+    opacity: 0.1
+  },
+  title: {
+    fontSize: 40,
+    textAlign: 'center',
+    color: "white",
+    padding: 25,
+    fontWeight: "bold"
   }
 });
