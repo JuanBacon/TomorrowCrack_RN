@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     height: 200,
+    
   },
   spacing: {
     flex: 1,
@@ -37,6 +38,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "#9BFF00",
     padding: 10,
+    borderRadius: 25,
+    backgroundColor: "rgba(48,43,79,0.7)",
+    backdropFilter: "blur(6px)",
+    mixBlendMode: "normal",
   },
   name: {
     flexGrow: 1,
@@ -44,6 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    color: "white"
   },
   button: {
     flexDirection: "row",
@@ -71,11 +77,14 @@ const styles = StyleSheet.create({
   image: {
     height: 100,
     width: 100,
+    borderRadius: 100
+
   },
   content: {
     flexDirection: "row",
   },
   textDesc: {
     flexShrink: 1,
+    color: "white"
   },
 });

@@ -20,5 +20,6 @@ export default function ArtistList(props) {
 const styles = StyleSheet.create({
   flatListContainer: {
     paddingHorizontal: 5,
+    height: "100%",
   },
 });
