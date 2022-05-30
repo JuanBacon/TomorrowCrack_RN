@@ -10,6 +10,7 @@ export default function GalleryScreen() {
   return (
 
     <View style={styles.container}>
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}></ImageBackground>
       <GalleryHeader image={imageHeader} />
       <GalleryList images={galleryAPI.results} changeHeader ={ (item)=>{ setImageHeader(item);}} />
     </View>
@@ -20,8 +21,12 @@ export default function GalleryScreen() {
 
 
 const styles = StyleSheet.create({
-  container: {
+  image: {
+    flex: 1,
+    justifyContent: "center"
+  }, container: {
     flex: 1,
     flexWrap: "nowrap",
+    backgroundColor:'#302B4F',
   },
 });

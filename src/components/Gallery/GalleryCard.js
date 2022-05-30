@@ -24,8 +24,13 @@ export default function GalleryCard(props) {
 
 const styles = StyleSheet.create({
   image: {
-    height: 100,
-    width: 100,
+    height: 130,
+    width: 115,
     borderRadius:10,
+    margin:10,
+  },
+  fondo:{
+    backgroundColor:'white',
+    opacity:0.5,
   },
 });
