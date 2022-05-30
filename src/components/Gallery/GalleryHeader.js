@@ -19,10 +19,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor:'#302B4F',
+    borderRadius:50,
   },
   image: {
     height: 150,
     width: "100%",
+    borderRadius:30,
   },
   text: {
     position: "absolute",
