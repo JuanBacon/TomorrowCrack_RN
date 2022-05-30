@@ -24,9 +24,11 @@ export default function Navigation() {
         paddingRight: 29,
       },
       showLabel: false,
-      headerShown: false
+      headerShown: false,
+      activeTintColor: "#f00"
+      
     }}>
-      <Tab.Screen name="Tickets" component={CartNavigation} options = {{tabBarIcon: () => icono ('confirmation-number')}}/>
+      <Tab.Screen name="Tickets" component={CartNavigation} options = {{tabBarIcon: () => icono ('confirmation-number')}} />
       <Tab.Screen name="Artista" component={ArtistNavigation} options = {{tabBarIcon: () => icono ('recent-actors'),tabBarBadge:5}} />
       <Tab.Screen name="Principal" component={HomeScreen} options = {{tabBarIcon: () => icono ('home')}} />
       <Tab.Screen name="Galeria" component={GalleryNavigation} options = {{tabBarIcon: () => icono ('image')}}/>
@@ -49,5 +51,6 @@ const styles = StyleSheet.create({
 });
 
 function icono (iconName){
-  return(<MaterialIcons  name={iconName} size ={50} color="white"></MaterialIcons>)
+  
+  return(<MaterialIcons name={iconName} size ={50} color={iconName == "home" ? "#6A67F4" : "#ffffff"}></MaterialIcons>)
   }
