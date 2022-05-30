@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor:'#302B4F',
     borderRadius:50,
+    opacity:0.5,
   },
   image: {
     height: 150,
