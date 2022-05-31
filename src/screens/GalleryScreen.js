@@ -16,9 +16,8 @@ export default function GalleryScreen() {
       <Text style={styles.title}>Galería</Text>
       <Image source={require('../../assets/GifMuestra2.gif')} style={styles.video} resizeMode="cover"></Image>
       <GalleryHeader image={imageHeader} />
-      <View style={styles.bgColor}>
-      <GalleryList images={galleryAPI.results} changeHeader ={ (item)=>{ setImageHeader(item);}} />
-      </View>
+      <GalleryList   images={galleryAPI.results} changeHeader ={ (item)=>{ setImageHeader(item);}} />
+
     </View>
   );
 }
