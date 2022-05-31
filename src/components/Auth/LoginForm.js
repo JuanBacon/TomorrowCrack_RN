@@ -51,7 +51,7 @@ export default function LoginForm(props) {
       />
 
       <Pressable style={styles.button} onPress={formik.handleSubmit}>
-        <Text style={styles.textButton}> Acceder </Text>
+        <Text style={styles.textButton}> ACCEDER </Text>
       </Pressable>
 
       <Text style={styles.error}> {formik.errors.username}</Text>
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     fontSize: 20,
-    fontWeight: "500",
+    fontWeight: "300",
     lineHeight: 24,
     letterSpacing: -0.3,
     color: "rgba(255, 255, 255, 1)",

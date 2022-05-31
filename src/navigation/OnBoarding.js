@@ -6,6 +6,7 @@ import react from 'react';
 
 const {width, height} = Dimensions.get('window');
 
+
 const slides = [
   {
     id: "1",
@@ -41,8 +42,10 @@ const Slide = ({item}) => {
   );
 };
 
-export default function OnBoarding() {
+export default function OnBoarding(prop) {
   const [currentSlideIndex, setCurrentSlideIndex] = react.useState(0);
+  const {navigation} = prop
+  const ref = React.useRef(null);
   const Footer = () => {
     return <View style={{height:height * 0.20, justifyContent: "space-between", paddingHorizontal: 20}}>
       <View style={{flexDirection: 'row', justifyContent:"center",marginTop:20}}>
@@ -52,16 +55,39 @@ export default function OnBoarding() {
         }]}></View>))}
       </View>
       <View style={{marginBottom:20}}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-          <TouchableOpacity style={[styles.btn, styles.btnSecundario]}>
+        { currentSlideIndex == slides.length-1 ? <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+        <TouchableOpacity style={[styles.btn, styles.btnPrincipal, {width: width *0.85}]} onPress={skip}>
+            <Text style={[styles.btnText]}>EMPEZAR</Text>
+        </TouchableOpacity>
+      </View> : <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+          <TouchableOpacity style={[styles.btn, styles.btnSecundario]} onPress={skip}>
             <Text style={[styles.btnText]}>OMITIR</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.btn, styles.btnPrincipal]}>
+          <TouchableOpacity style={[styles.btn, styles.btnPrincipal]} onPress={goNextSlide}>
             <Text style={[styles.btnText]}>SIGUIENTE</Text>
           </TouchableOpacity>
-        </View>
+        </View>}
       </View>
     </View>
+  }
+
+  const updateCurrentSlideIndex = e => {
+    const contentOffsetX = e.nativeEvent.contentOffset.x;
+    const currentIndex = Math.round(contentOffsetX/width);
+    setCurrentSlideIndex(currentIndex);
+  }
+  const goNextSlide = () => {
+    const nextSlideIndex = currentSlideIndex + 1;
+    if(nextSlideIndex != slides.length){
+      
+      const offset = nextSlideIndex * width
+      ref?.current?.scrollToOffset({offset});
+      setCurrentSlideIndex(nextSlideIndex);
+    }
+  }
+
+  const skip = () => {
+    navigation.replace("Login");
   }
   return (
     
@@ -69,6 +95,8 @@ export default function OnBoarding() {
       <Image source={require('../../assets/GifMuestra2.gif')} style={styles.video} resizeMode="cover"></Image>
       <StatusBar barStyle="light-content" backgroundColor={"#302B4F"} />
       <FlatList
+      ref={ref}
+      onMomentumScrollEnd={updateCurrentSlideIndex}
       pagingEnabled
       data={slides} 
       contentContainerStyle={{height: height*0.85}}
