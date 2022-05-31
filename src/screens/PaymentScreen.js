@@ -1,4 +1,4 @@
-import { View, Text, Button, Image, StyleSheet, TextInput } from "react-native";
+import { View, Text, Button, Image, StyleSheet, TextInput, Pressable } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -20,6 +20,8 @@ export default function PaymentScreen({ route, navigation }) {
         <TextInput placeholder="Nombre Titular" />
         <Text>CCV</Text>
         <TextInput placeholder="CCV" />
+
+        <Pressable ><Text>Checkout</Text></Pressable>
         <Text>TOTAL: {totalPrice}</Text>
       </View>
     </SafeAreaView>
