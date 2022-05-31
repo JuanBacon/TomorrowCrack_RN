@@ -1,9 +1,13 @@
 import { View, Text, StatusBar, Image, StyleSheet } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 
-export default function CheckOutScreen() {
+export default function CheckOutScreen({ route, navigation }) {
+    const { totalPrice } = route.params;
+
+    console.log(totalPrice);
   return (
+    <View>
+      <Button title="Atras" onPress={() => navigation.goBack()} />
 
     
     <SafeAreaView style={styles.appBackground}>
@@ -26,7 +30,7 @@ export default function CheckOutScreen() {
           </View>
         <Image source={require('../../assets/Van.png')}></Image>
       <Text>CheckOutScreen</Text>
-    </SafeAreaView>
+    </View>
   )
 }
 
