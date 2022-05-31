@@ -23,11 +23,11 @@ export default function HomeScreen() {
       <Text style={styles.tittle}>TOMORROWCRACK'S</Text>
         <View style={{ display: "flex", alignItems: "center" }}>
           <View style={styles.block}>
-            <Text style={styles.subtittle}>Descripción</Text>
+            <Text style={styles.subtittle}>¿De qué trata?</Text>
             <Text style={styles.text}>
               Este es el evento más importante del país, donde se reúnen los más
               cracks de la música y tomarse el gran escenario y hacer de tu
-              noche una de las mejores.{" "}
+              noche una de las mejores.
               <Text style={{ fontWeight: "bold" }}>
                 ¡Este año se celebra la edición 2022 del festival!
               </Text>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: "white",
     padding: 10,
-    fontWeight: "300",
+    fontWeight: "400",
   },
   text: {
     fontSize: 20,
