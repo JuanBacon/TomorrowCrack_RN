@@ -15,7 +15,7 @@ export default function PaymentScreen({ route, navigation }) {
 
   return (
     <SafeAreaView>
-      <Button title="Atras" onPress={() => navigation.goBack()} />
+      <Button title="Atras" onPress={() => navigation.goBack()} color="#FB7785"/>
       <View style={style.container}>
         <Image
           style={style.cardImage}
@@ -35,7 +35,7 @@ export default function PaymentScreen({ route, navigation }) {
             navigation.navigate("CheckOut", { totalPrice: totalPrice })
           }
         >
-          <Text>Checkout</Text>
+          <Text style={{color: "white"}}>PAGAR</Text>
         </Pressable>
       </View>
     </SafeAreaView>
@@ -44,8 +44,10 @@ export default function PaymentScreen({ route, navigation }) {
 
 const style = StyleSheet.create({
   container: {
+    height: "90%",
     display: "flex",
     alignItems: "center",
+    justifyContent: "center"
   },
   cardImage: {
     width: "80%",
@@ -53,7 +55,11 @@ const style = StyleSheet.create({
     resizeMode: "contain",
   },
   boton:{
-    height: 30,
-    backgroundColor: 'blue'
+    backgroundColor: '#3D9970',
+    borderRadius: 5,
+    height:50,
+    width: "50%",
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });

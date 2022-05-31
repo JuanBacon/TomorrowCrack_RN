@@ -18,7 +18,7 @@ const slides = [
     id: "2",
     image: require('../../assets/travel.png'),
     tittle: "Todo sobre el evento",
-    desc: "En esta app podrás ver los artistas invitados, la ubicación y fecha del evento, además de poder comprar los tiquetes para asistir"
+    desc: "En esta app podrás ver los artistas invitados y sus playlist, la ubicación y fecha del evento, además de poder comprar los tiquetes para asistir"
   },
   {
     id: "3",
