@@ -21,7 +21,6 @@ export default function HomeScreen() {
         resizeMode="cover"
       ></Image>
       <Text style={styles.tittle}>TOMORROWCRACK'S</Text>
-      <ScrollView style={{marginBottom:50}} >
         <View style={{ display: "flex", alignItems: "center" }}>
           <View style={styles.block}>
             <Text style={styles.subtittle}>Descripción</Text>
@@ -44,12 +43,11 @@ export default function HomeScreen() {
             </Text>
             <Image
               source={require("../../assets/place.png")}
-              resizeMode="contain"
+              resizeMode="cover"
               style={styles.placeImg}
             ></Image>
           </View>
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -70,14 +68,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     padding: 40,
+    paddingBottom: 10,
     fontWeight: "bold",
   },
   subtittle: {
     fontSize: 35,
     textAlign: "left",
     color: "white",
-    padding: 20,
-    fontWeight: "medium",
+    padding: 10,
+    fontWeight: "300",
   },
   text: {
     fontSize: 20,
@@ -91,13 +90,14 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: "90%",
     display: "flex",
-    alignItems: "center",
-    paddingLeft: 44,
-    paddingRight: 44,
+    justifyContent: "center",
+    paddingLeft: 30,
+    paddingRight: 30,
     marginVertical: 10,
   },
   placeImg: {
-    height: "40%",
+    height: "32%",
     width: "100%",
+    margin: 0
   },
 });
