@@ -2,8 +2,8 @@ import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
 import React, { useState } from "react";
 
 export default function CartItem(props) {
-  const { ticketName, changeValue,ticketObj} = props;
-
+  const { ticketName, changeValue,ticketObj, price} = props;
+  const ticketPrice = price[ticketName]
   const [count, setCount] = useState(0);
 
   return (
@@ -18,12 +18,8 @@ export default function CartItem(props) {
         }}
       >
         <Text>+</Text>
-      </Pressable>
-      <TextInput
-        style={styles.input}
-        editable= {false}
-        value={count.toString()}
-      />
+      </Pressable>  
+      <Text>{count}</Text>
       <Pressable
         style={styles.button}
         onPress={() => {
@@ -35,6 +31,7 @@ export default function CartItem(props) {
       >
         <Text>-</Text>
       </Pressable>
+      <Text>Valor: ${ticketPrice}</Text>
     </View>
   );
 }
@@ -43,9 +40,10 @@ const styles = StyleSheet.create({
   container: {
     height: 100,
     width: "80%",
-    backgroundColor: "red",
+    backgroundColor: "gray",
     alignItems: "center",
     marginHorizontal: "10%",
+    marginVertical: 6
   },
   button: {
     backgroundColor: "#fff",
