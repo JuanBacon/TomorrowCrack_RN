@@ -29,7 +29,8 @@ export default function PaymentScreen({ route, navigation }) {
         <TextInput placeholder="Fecha Vencimiento" />
         <Text>CCV</Text>
         <TextInput placeholder="CCV" />
-
+        <Text>Total a pagar:</Text>
+        <Text> {totalPrice}</Text>
         <Pressable style= {style.boton}
           onPress={() =>
             navigation.navigate("CheckOut", { totalPrice: totalPrice })

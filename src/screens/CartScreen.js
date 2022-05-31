@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CartItem from "../components/CartItem";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function CartScreen(props) {
   const {navigation} = props;
@@ -20,105 +21,108 @@ export default function CartScreen(props) {
       <Image source={require('../../assets/GifMuestra2.gif')} style={styles.video} resizeMode="cover"></Image>
     <SafeAreaView styles={styles.safeContainer}>
 
+      <View style={{flexDirection: "row",justifyContent: "space-between", alignItems: "center", paddingHorizontal: 10}}>
+      <Text style={{color: "white"}}>Total : {total} COP</Text>
       <Pressable style={styles.button} onPress= {()=>{navigation.navigate('Payment',{totalPrice : total})}} >
-        <Text>Boton</Text>
+        <Text style={{color: "white"}}>Pagar</Text>
       </Pressable>
+      </View>
 
       <Text style={styles.title}>Boletería</Text>
       <View style={styles.container}>
       <Image style={styles.image} source={require('../../assets/autocine.png')} />
       </View>
-      <CartItem
-        ticketName="Platino 1"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}        
-      />
-      <CartItem
-        ticketName="Platino 2"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="Oro 1"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="Oro 2"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="Diamante 1"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="Diamante 2"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="Vip 1"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="Vip 2"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <CartItem
-        ticketName="General"
-        price={tickectsPrice}
-        changeValue={(ticketCount) => setValues(ticketCount)}
-        ticketObj={values}
-      />
-      <Text>Total = {total}</Text>
+      <ScrollView>
+        <CartItem
+          ticketName="Platino 1"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}        
+        />
+        <CartItem
+          ticketName="Platino 2"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        <CartItem
+          ticketName="Oro 1"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        {/* <CartItem
+          ticketName="Oro 2"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        <CartItem
+          ticketName="Diamante 1"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        <CartItem
+          ticketName="Diamante 2"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        <CartItem
+          ticketName="Vip 1"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        <CartItem
+          ticketName="Vip 2"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        />
+        <CartItem
+          ticketName="General"
+          price={tickectsPrice}
+          changeValue={(ticketCount) => setValues(ticketCount)}
+          ticketObj={values}
+        /> */}
+      </ScrollView>
+      
     </SafeAreaView>
     </View>
   );
 }
 
 const ticketsInputValues = {
-  Platino1: 0,
-  Platino2: 0,
-  Oro1: 0,
-  Oro2: 0,
-  Diamante1: 0,
-  Diamante2: 0,
-  vip1: 0,
-  vip2: 0,
-  General: 0,
+  "Platino 1": 0,
+  "Platino 2": 0,
+  "Oro 1": 0,
+  "Oro 2": 0,
+  "Diamante 1": 0,
+  "Diamante 2": 0,
+  "vip 1": 0,
+  "vip 2": 0,
+  "General": 0,
 };
 
 const tickectsPrice = {
-  Platino1: 500000,
-  Platino2: 450000,
-  Oro1: 400000,
-  Oro2: 350000,
-  Diamante1: 300000,
-  Diamante2: 250000,
-  vip1: 200000,
-  vip2: 150000,
-  General: 100000,
+  "Platino 1": 500000,
+  "Platino 2": 450000,
+  "Oro 1": 400000,
+  "Oro 2": 350000,
+  "Diamante 1": 300000,
+  "Diamante 2": 250000,
+  "vip 1": 200000,
+  "vip 2": 150000,
+  "General": 100000,
 };
 
 const styles = StyleSheet.create({
   bgColor: {
-    borderRadius: 10,
     padding:5,
-    backgroundColor: "rgba(48,43,79,0.8)",
-    backdropFilter: "blur(6px)",
-    mixBlendMode: "normal",
+    backgroundColor: "#06021B",
+    height: "100%"
   },
   safeContainer: {
     flex: 1,
@@ -127,11 +131,13 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop:10,
-    backgroundColor: "rgba(48,43,79,0.8)",
+    backgroundColor: "rgba(106,103,244,1)",
     height: 50,
-    width:50,
+    width:100,
     borderRadius:10,
-    left:350,
+    // left: "70%",
+    justifyContent: "center",
+    alignItems: "center"
   },
   title: {
     fontSize: 40,

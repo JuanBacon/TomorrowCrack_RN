@@ -20,9 +20,9 @@ export default function CartItem(props) {
       >
         <Text style={styles.textDesc}>+</Text>
       </Pressable>  
-      <Text>{count}</Text>
+      <Text style={{color:"white"}}>{count}</Text>
       <Pressable
-        style={styles.button}
+        style={[styles.button, {backgroundColor:"#FB7785"} ]}
         onPress={() => {
           let restCounter = count - 1;
           if (restCounter <= 0) restCounter = 0;
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flexDirection:"row",
   },
   button: {
-    backgroundColor: "gray",
+    backgroundColor: "rgba(106,103,244,1)",
     width: 30,
     height: 30,
     borderRadius:100,
