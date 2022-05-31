@@ -13,6 +13,7 @@ export default function ArtistList(props) {
       numColumns={1}
       style={styles.flatListContainer}
       renderItem={({ item }) => <ArtistCard item={item} />}
+      contentContainerStyle={{ paddingBottom: 150 }}
     />
   );
 }
