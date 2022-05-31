@@ -16,7 +16,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.appBackground}>
       <StatusBar barStyle="light-content" backgroundColor={"#302B4F"} />
       <Image
-        source={require("../../assets/GifMuestra2.gif")}
+        source={require("../../assets/GifMuestra.gif")}
         style={styles.video}
         resizeMode="cover"
       ></Image>
