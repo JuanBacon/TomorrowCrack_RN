@@ -28,7 +28,7 @@ export default function Navigation() {
 
 
   return (
-    <Tab.Navigator tabBarOptions={tabBarOptions}>
+    <Tab.Navigator tabBarOptions={tabBarOptions} initialRouteName= 'Principal'>
       <Tab.Screen
         name="Tickets"
         component={CartNavigation}
