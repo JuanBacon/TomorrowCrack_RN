@@ -14,7 +14,7 @@ export default function ArtistScreen() {
 
     <SafeAreaView style={styles.appBackground}>
       <StatusBar barStyle="light-content" backgroundColor={"#302B4F"} />
-      <Text style={styles.title}>Artistas</Text>
+      <Text style={styles.tittle}>Artistas</Text>
       <Image source={require('../../assets/GifMuestra2.gif')} style={styles.video} resizeMode="cover"></Image>
       <ArtistList artists= {artistAPI.results}/>
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     height: "100%",
     opacity: 0.1
   },
-  title: {
+  tittle: {
     fontSize: 40,
     textAlign: 'center',
     color: "white",
