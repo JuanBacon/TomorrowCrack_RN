@@ -1,15 +1,18 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CartItem from "../components/CartItem";
 
-export default function CartScreen() {
+export default function CartScreen(props) {
+  const {navigation} = props;
   const [values, setValues] = useState(ticketsInputValues);
 
-  const total = Object.keys(values).map(calTotal).reduce((prev, next) => prev+ next)
+  const total = Object.keys(values)
+    .map(calTotal)
+    .reduce((prev, next) => prev + next);
 
-  function calTotal(key){
-    return( tickectsPrice[key]*values[key])
+  function calTotal(key) {
+    return tickectsPrice[key] * values[key];
   }
 
   return (
@@ -28,11 +31,12 @@ export default function CartScreen() {
         ticketObj={values}
       />
       <Text>Total = {total}</Text>
+      <Pressable style={styles.button} onPress= {()=>{navigation.navigate('CheckOut')}} >
+        <Text>Boton</Text>
+      </Pressable>
     </SafeAreaView>
   );
 }
-
-
 
 const ticketsInputValues = {
   vip1: 0,
@@ -52,4 +56,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  button: {
+    backgroundColor: 'green',
+    height: 30
+  }
 });
