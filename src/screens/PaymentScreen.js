@@ -2,7 +2,7 @@ import { View, Text, Button, Image, StyleSheet, TextInput } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function CheckOutScreen({ route, navigation }) {
+export default function PaymentScreen({ route, navigation }) {
   const { totalPrice } = route.params;
 
   console.log(totalPrice);
