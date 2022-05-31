@@ -80,7 +80,9 @@ const styles = StyleSheet.create({
   image: {
     height: 100,
     width: 100,
-    borderRadius: 100
+    borderRadius: 100,
+    borderColor: "#FB7785",
+    borderWidth: 3,
   },
   content: {
     flexDirection: "row",
@@ -89,6 +91,7 @@ const styles = StyleSheet.create({
   textDesc: {
     flexShrink: 1,
     color: "white",
-    left: 10
+    fontWeight: "300",
+    left: 10,
   },
 });
