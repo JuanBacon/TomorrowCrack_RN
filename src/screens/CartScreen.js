@@ -9,7 +9,7 @@ export default function CartScreen(props) {
 
   const total = Object.keys(values)
     .map(calTotal)
-    .reduce((prev, next) => prev + next);
+    .reduce((prev, next) => prev + next) ?? 0;
 
   function calTotal(key) {
     return tickectsPrice[key] * values[key];
@@ -31,7 +31,7 @@ export default function CartScreen(props) {
         ticketObj={values}
       />
       <Text>Total = {total}</Text>
-      <Pressable style={styles.button} onPress= {()=>{navigation.navigate('CheckOut')}} >
+      <Pressable style={styles.button} onPress= {()=>{navigation.navigate('CheckOut',{totalPrice : total})}} >
         <Text>Boton</Text>
       </Pressable>
     </SafeAreaView>

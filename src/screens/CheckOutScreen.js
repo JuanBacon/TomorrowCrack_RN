@@ -2,7 +2,10 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-export default function CheckOutScreen() {
+export default function CheckOutScreen(props) {
+  const {route:{totalPrice}} = props
+
+  console.log(totalPrice);
   return (
 
     
