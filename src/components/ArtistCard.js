@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable, Linking} from "react-native";
 import React from "react";
 
 export default function ArtistCard(props) {
@@ -9,7 +9,7 @@ export default function ArtistCard(props) {
         <View style={styles.bgColor}>
           <View style={styles.content}>
             <Text style={styles.name}> {item.name} </Text>
-            <Pressable style={styles.button}>
+            <Pressable style={styles.button} onPress={()=> {Linking.openURL(item.list)}}>
               <Image source={require('../../assets/spotify_icon.png')} style={styles.imageBtn} />
               <Text style={styles.textButton}>Lista</Text>
             </Pressable>

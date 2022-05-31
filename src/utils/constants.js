@@ -5,30 +5,35 @@ export const artistAPI = {
       name: "Badbunny",
       desc:"Rapero, cantante y compositor puertorriqueño de los generos Urbanos latinos",
       uri: "https://yt3.ggpht.com/7tCfeCWH4arhsTM-4Rz4IxWieQbegzibeXlG-kbytAujdk5dr2K0gBb8NG0Cvk6lB1dPkjyd=s900-c-k-c0x00ffffff-no-rj",
+      list: "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X?si=7l0XTobuSuGUid4dg9h2pA"
     },
     {
       id: 2,
       name: "BlackPink",
       desc: "Grupo del genero Kpop integrado por cuatro miembros: Jisoo, Jennie, Rosé y Lisa. ",
       uri: "https://depor.com/resizer/RE-UxBKaioGIPOiCpIWqtFo4qrg=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/BOBAQYR2A5E5NOZFGHDUBFUZAI.jpg",
+      list: "https://open.spotify.com/artist/41MozSoPIsD1dJM0CLPjZF?si=qIHYd2_RSt6F8ADtcNG-Nw"
     },
     {
       id: 3,
       name: "Chayanee",
       desc: "Cantante, compositor, bailarín y actor puertorriqueño. Considerado uno de los artistas latinos con mayores ventas en el mundo.",
       uri: "https://www.mdzol.com/u/fotografias/m/2021/6/13/f1280x720-1068869_1200544_5529.jpg",
+      list: "https://open.spotify.com/artist/1JbemQ1fPt2YmSLjAFhPBv?si=e2292bba09194e16"
     },
     {
       id: 4,
       name: "Jackson Wang",
       desc: "Rapero, cantante, compositor, bailarín, modelo, ex-esgrimista hongkonés, miembro del grupo surcoreano Got7.",
       uri: "https://i0.wp.com/kstationtv.com/wp-content/uploads/2022/03/artwork-440x440-1.jpg?fit=440%2C440&ssl=1",
+      list: "https://open.spotify.com/artist/1kfWoWgCugPkyxQP8lkRlY?si=feb9755f4a7d4446"
     },
     {
       id: 5,
       name: "Stray Kids",
       desc: "Grupo de Kpop y hip-hopintegrado por Bangchan, Leeknow, Felix, Han, Changbin, Hyunjin, Seungmin y I.N",
       uri: "https://cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/3Y5ZP7Q5FJBMLJKPHPFIDA6D2Y.jpg",
+      list: "https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE?si=54f20e9162c94e94"
     },
   ],
 };
