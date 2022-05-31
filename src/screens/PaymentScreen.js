@@ -19,7 +19,7 @@ export default function PaymentScreen({ route, navigation }) {
       <View style={style.container}>
         <Image
           style={style.cardImage}
-          source={require("../../assets/creditCard.png")}
+          source={require("../../assets/CreditCard.png")}
         />
         <Text>Numero Tarjeta</Text>
         <TextInput placeholder="xxxx-xxxx-xxxx-xxxx" />

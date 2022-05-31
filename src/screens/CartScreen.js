@@ -34,55 +34,55 @@ export default function CartScreen(props) {
       </View>
       <ScrollView style={{marginBottom: 400}}>
         <CartItem
-          ticketName="Platino 1"
+          ticketName= {Object.keys(tickectsPrice)[0]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}        
         />
         <CartItem
-          ticketName="Platino 2"
+          ticketName={Object.keys(tickectsPrice)[1]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="Oro 1"
+          ticketName={Object.keys(tickectsPrice)[2]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="Oro 2"
+          ticketName={Object.keys(tickectsPrice)[3]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="Diamante 1"
+          ticketName={Object.keys(tickectsPrice)[4]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="Diamante 2"
+          ticketName={Object.keys(tickectsPrice)[5]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="Vip 1"
+          ticketName={Object.keys(tickectsPrice)[6]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="Vip 2"
+          ticketName={Object.keys(tickectsPrice)[7]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
         <CartItem
-          ticketName="General"
+          ticketName={Object.keys(tickectsPrice)[8]}
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}

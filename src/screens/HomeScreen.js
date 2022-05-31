@@ -20,6 +20,7 @@ export default function HomeScreen() {
         style={styles.video}
         resizeMode="cover"
       ></Image>
+      <ScrollView style={{height: "100%"}}>
       <Text style={styles.tittle}>TOMORROWCRACK'S</Text>
         <View style={{ display: "flex", alignItems: "center" }}>
           <View style={styles.block}>
@@ -33,7 +34,7 @@ export default function HomeScreen() {
               </Text>
             </Text>
           </View>
-          <View style={styles.block}>
+          <View style={[styles.block, {marginBottom: 300}]}>
             <Text style={styles.subtittle}>Fecha, Hora y Lugar</Text>
             <Text style={styles.text}>
               Esta edición del TomorrowCrack's Festival llegará a Cali el día{" "}
@@ -48,6 +49,7 @@ export default function HomeScreen() {
             ></Image>
           </View>
         </View>
+        </ScrollView>
     </SafeAreaView>
   );
 }
