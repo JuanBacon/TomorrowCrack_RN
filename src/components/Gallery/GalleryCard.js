@@ -11,7 +11,9 @@ export default function GalleryCard(props) {
   const { item , changeHeader} = props;
 
   return (
+    
     <TouchableWithoutFeedback onPress={()=>changeHeader(item)}>
+
       <View>
         <Image source={{ uri: item.url }} style={styles.image} />
       </View>
@@ -19,12 +21,11 @@ export default function GalleryCard(props) {
   );
 }
 
-
-
-
 const styles = StyleSheet.create({
   image: {
-    height: 100,
-    width: 100,
+    height: 130,
+    width: 115,
+    borderRadius:10,
+    margin:10,
   },
 });

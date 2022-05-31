@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable, Linking} from "react-native";
 import React from "react";
 
 export default function ArtistCard(props) {
@@ -9,9 +9,9 @@ export default function ArtistCard(props) {
         <View style={styles.bgColor}>
           <View style={styles.content}>
             <Text style={styles.name}> {item.name} </Text>
-            <Pressable style={styles.button}>
-              <Image source={{ uri: item.uri }} style={styles.imageBtn} />
-              <Text style={styles.textButton}>Lista Spotify</Text>
+            <Pressable style={styles.button} onPress={()=> {Linking.openURL(item.list)}}>
+              <Image source={require('../../assets/spotify_icon.png')} style={styles.imageBtn} />
+              <Text style={styles.textButton}>Lista</Text>
             </Pressable>
           </View>
           <View style={styles.content}>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   spacing: {
     flex: 1,
-    padding: 8,
+    padding: 5,
   },
   bgColor: {
     borderRadius: 10,
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    marginLeft: 30,
     color: "white"
   },
   button: {
@@ -56,29 +57,30 @@ const styles = StyleSheet.create({
     width: "10%",
     flexGrow: 1,
     height: 30,
-    paddingVertical: 7,
     paddingHorizontal: 12,
-    borderRadius: 4,
+    borderRadius: 8,
     elevation: 1,
-    backgroundColor: "black",
+    backgroundColor: "#B667F4",
+    opacity:0.8,
   },
   textButton: {
-    fontSize: 12,
+    fontSize: 15,
     alignSelf: "center",
-    lineHeight: 11,
+    justifyContent: "center",
     letterSpacing: 0.25,
     color: "white",
   },
   imageBtn: {
-    marginRight: 8,
-    height: 15,
-    width: 15,
+    marginRight: 4,
+    alignSelf: "center",
+    justifyContent: "center",
+    height: 25,
+    width: 25,
   },
   image: {
     height: 100,
     width: 100,
     borderRadius: 100
-
   },
   content: {
     flexDirection: "row",
