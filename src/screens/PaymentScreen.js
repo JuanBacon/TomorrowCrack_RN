@@ -1,11 +1,18 @@
-import { View, Text, Button, Image, StyleSheet, TextInput, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  Image,
+  StyleSheet,
+  TextInput,
+  Pressable,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PaymentScreen({ route, navigation }) {
   const { totalPrice } = route.params;
 
-  console.log(totalPrice);
   return (
     <SafeAreaView>
       <Button title="Atras" onPress={() => navigation.goBack()} />
@@ -21,8 +28,13 @@ export default function PaymentScreen({ route, navigation }) {
         <Text>CCV</Text>
         <TextInput placeholder="CCV" />
 
-        <Pressable ><Text>Checkout</Text></Pressable>
-        <Text>TOTAL: {totalPrice}</Text>
+        <Pressable
+          onPress={() =>
+            navigation.navigate("CheckOut", { totalPrice: totalPrice })
+          }
+        >
+          <Text>Checkout</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
