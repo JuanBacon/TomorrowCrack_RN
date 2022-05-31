@@ -25,10 +25,12 @@ export default function PaymentScreen({ route, navigation }) {
         <TextInput placeholder="xxxx-xxxx-xxxx-xxxx" />
         <Text>Titular</Text>
         <TextInput placeholder="Nombre Titular" />
+        <Text>Fecha Vencimiento</Text>
+        <TextInput placeholder="Fecha Vencimiento" />
         <Text>CCV</Text>
         <TextInput placeholder="CCV" />
 
-        <Pressable
+        <Pressable style= {style.boton}
           onPress={() =>
             navigation.navigate("CheckOut", { totalPrice: totalPrice })
           }
@@ -50,4 +52,8 @@ const style = StyleSheet.create({
     height: 180,
     resizeMode: "contain",
   },
+  boton:{
+    height: 30,
+    backgroundColor: 'blue'
+  }
 });

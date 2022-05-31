@@ -14,8 +14,6 @@ export default function CartNavigation() {
         <Stack.Screen name='Carrito' component={CartScreen} />
         <Stack.Screen name='Payment' component={PaymentScreen} />
         <Stack.Screen name='CheckOut' component={CheckOutScreen} />
-
-
     </Stack.Navigator>
     )
 }
