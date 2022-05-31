@@ -31,7 +31,7 @@ export default function CartScreen(props) {
         ticketObj={values}
       />
       <Text>Total = {total}</Text>
-      <Pressable style={styles.button} onPress= {()=>{navigation.navigate('CheckOut',{totalPrice : total})}} >
+      <Pressable style={styles.button} onPress= {()=>{navigation.navigate('Payment',{totalPrice : total})}} >
         <Text>Boton</Text>
       </Pressable>
     </SafeAreaView>

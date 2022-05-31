@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import CartScreen from '../screens/CartScreen';
-import CheckOutScreen from '../screens/CheckOutScreen';
+import PaymentScreen from '../screens/PaymentScreen';
 
 
 const Stack = createStackNavigator();
@@ -11,7 +11,7 @@ export default function CartNavigation() {
   return (
     <Stack.Navigator  screenOptions={{headerShown: false}}>
         <Stack.Screen name='Carrito' component={CartScreen} />
-        <Stack.Screen name='CheckOut' component={CheckOutScreen} />
+        <Stack.Screen name='Payment' component={PaymentScreen} />
 
     </Stack.Navigator>
     )
