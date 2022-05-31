@@ -8,7 +8,8 @@ export default function CartItem(props) {
 
   return (
     <View style={styles.container}>
-      <Text>{ticketName}</Text>
+      <Text style={styles.name} >{ticketName}</Text>
+      <Text style={styles.textVal}>${ticketPrice}</Text>
       <Pressable
         style={styles.button}
         onPress={() => {
@@ -17,7 +18,7 @@ export default function CartItem(props) {
           changeValue({ ...ticketObj, [ticketName]: addCounter });
         }}
       >
-        <Text>+</Text>
+        <Text style={styles.textDesc}>+</Text>
       </Pressable>  
       <Text>{count}</Text>
       <Pressable
@@ -29,28 +30,53 @@ export default function CartItem(props) {
           changeValue({ ...ticketObj, [ticketName]: restCounter });
         }}
       >
-        <Text>-</Text>
+      <Text style={styles.textDesc} >-</Text>
       </Pressable>
-      <Text>Valor: ${ticketPrice}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
-    width: "80%",
-    backgroundColor: "gray",
+    height: 80,
+    width: "100%",
+    backgroundColor: "rgba(48,43,79,0.8)",
     alignItems: "center",
-    marginHorizontal: "10%",
-    marginVertical: 6
+    marginVertical: 8,
+    borderRadius:25,
+    flexDirection:"row",
   },
   button: {
-    backgroundColor: "#fff",
-    width: 20,
+    backgroundColor: "gray",
+    width: 30,
+    height: 30,
+    borderRadius:100,
+    right: 20,
+    marginLeft:25,
   },
   input: {
-    backgroundColor: "#ff8",
+    backgroundColor: "white",
     marginVertical: 5,
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  name: {
+    flexGrow: 1,
+    width: "50%",
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center",
+    right: 50,
+    color: "white"
+  },
+  textVal: {
+    flexShrink: 1,
+    color: "white",
+    right: 120,
+  },
+  textDesc: {
+    flexShrink: 1,
+    color: "white",
+    left: 10
   },
 });
