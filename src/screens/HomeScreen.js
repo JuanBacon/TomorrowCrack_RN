@@ -38,8 +38,8 @@ export default function HomeScreen() {
             <Text style={styles.text}>
               Esta edición del TomorrowCrack's Festival llegará a Cali el día{" "}
               <Text style={{ fontWeight: "bold" }}>31 de Mayo del 2022</Text> a
-              las <Text style={{ fontWeight: "bold" }}>6:00PM</Text> en el
-              Autocine PiedraGrande
+              las <Text style={{ fontWeight: "bold" }}>6:00PM</Text> en el <Text style={{ fontWeight: "bold" }}>
+              Autocine PiedraGrande</Text> 
             </Text>
             <Image
               source={require("../../assets/place.png")}

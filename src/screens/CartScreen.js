@@ -32,7 +32,7 @@ export default function CartScreen(props) {
       <View style={styles.container}>
       <Image style={styles.image} source={require('../../assets/autocine.png')} />
       </View>
-      <ScrollView>
+      <ScrollView style={{marginBottom: 400}}>
         <CartItem
           ticketName="Platino 1"
           price={tickectsPrice}
@@ -51,7 +51,7 @@ export default function CartScreen(props) {
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
         />
-        {/* <CartItem
+        <CartItem
           ticketName="Oro 2"
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
@@ -86,7 +86,7 @@ export default function CartScreen(props) {
           price={tickectsPrice}
           changeValue={(ticketCount) => setValues(ticketCount)}
           ticketObj={values}
-        /> */}
+        />
       </ScrollView>
       
     </SafeAreaView>
@@ -101,8 +101,8 @@ const ticketsInputValues = {
   "Oro 2": 0,
   "Diamante 1": 0,
   "Diamante 2": 0,
-  "vip 1": 0,
-  "vip 2": 0,
+  "Vip 1": 0,
+  "Vip 2": 0,
   "General": 0,
 };
 
@@ -113,8 +113,8 @@ const tickectsPrice = {
   "Oro 2": 350000,
   "Diamante 1": 300000,
   "Diamante 2": 250000,
-  "vip 1": 200000,
-  "vip 2": 150000,
+  "Vip 1": 200000,
+  "Vip 2": 150000,
   "General": 100000,
 };
 
