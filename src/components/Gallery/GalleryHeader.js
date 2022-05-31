@@ -15,17 +15,25 @@ export default function GalleryHeader(props) {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 30,
+    marginTop:80,
+    marginBottom: 100,
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    borderRadius:30,
   },
   image: {
-    height: 150,
+    height: 200,
     width: "100%",
+    borderRadius:30,
   },
   text: {
     position: "absolute",
     color: "white",
+    fontSize: 30,
+    textShadowColor: '#0a0a0a',
+    textShadowOffset:{width: -2, height: -2},
+    textShadowRadius:3,
   },
 });
+
